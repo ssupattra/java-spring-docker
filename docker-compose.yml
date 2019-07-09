@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mysqldev:
+    image: mysql:5.7
+    volumes:
+     - /usr/local/var/mysql:/var/lib/mysql
+     - /usr/local/etc:/etc/mysql/conf.d
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pass5622
+      MYSQL_DATABASE: event
+      MYSQL_USER: root
+      MYSQL_PASSWORD: pass5622
+  web:
+    restart: always
+    build:
+     dockerfile: Dockerfile
+     context: .
+    links:
+     - mysqldev 
+    container_name: java_web
+    ports:
+      - "8888:8080"
+    stdin_open: true
+    tty: true
