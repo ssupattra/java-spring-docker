@@ -3,6 +3,9 @@ version: '3'
 services:
   mysqldev:
     image: mysql:5.7
+    volumes:
+     - /usr/local/var/mysql:/var/lib/mysql
+     - /usr/local/etc:/etc/mysql/conf.d
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: pass5622
@@ -14,13 +17,15 @@ services:
     build:
      dockerfile: Dockerfile
      context: .
+    links:
+     - mysqldev 
     container_name: java_web
     ports:
       - "8888:8080"
     stdin_open: true
     tty: true
     environment:
-      - MY_SQL_HOST=aaecufuc58j2ge.cvjn5p4ionz3.us-east-1.rds.amazonaws.com
+      - MY_SQL_HOST=mysqldev
       - MY_SQL_USER=root
       - MY_SQL_PASSWORD=pass5622
       - MY_SQL_PORT=3306
