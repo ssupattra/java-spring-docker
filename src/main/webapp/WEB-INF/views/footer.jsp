@@ -1,7 +1,7 @@
 <footer class="footer">
         <div class="container-fluid">
           <div class="copyright float-left">
-            Java Spring Code: <a href="https://github.com/ssupattra/java-spring-docker">https://github.com/ssupattra/java-spring-docker</a><br><a href="mailto:s_supattra@yahoo.com">Supattra Swasrukkiet (s_supattra@yahoo.com)</a>
+            Java Spring Code: <a href="https://github.com/ssupattra/java-spring-docker" target="_blank">https://github.com/ssupattra/java-spring-docker</a><br><a href="mailto:s_supattra@yahoo.com">Supattra Swasrukkiet (s_supattra@yahoo.com)</a>
           </div>
           <div class="copyright float-right">
             &copy;
