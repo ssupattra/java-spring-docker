@@ -3,7 +3,7 @@ services:
  - docker
 
 script:
- - docker build -t supattra/java-spring .
+ - docker build -t supattra/java-spring ./
 
 after_success:
 # login to docker CLI
