@@ -7,6 +7,7 @@ target/m2e-wtp/
 target/maven-archiver/
 target/maven-status/
 target/my-java-app-0.0.1-SNAPSHOT/
+target/my-java-app-0.0.1-SNAPSHOT.war.original
 target/surefire-reports/
 target/test-classes/
 !.mvn/wrapper/maven-wrapper.jar
