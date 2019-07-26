@@ -32,16 +32,16 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
-        <a href="index.html" class="simple-text logo-normal">
+        <a href="/" class="simple-text logo-normal">
           IT Events
         </a>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
 	  <li class="nav-item active ">
-            <a class="nav-link" href="./tables.html">
+            <a class="nav-link" href="/getEvents">
               <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+              <p>Events</p>
             </a>
           </li>
           
