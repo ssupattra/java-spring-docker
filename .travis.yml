@@ -10,3 +10,16 @@ after_success:
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
  # take those images to docker hub
  - docker push supattra/java-spring
+
+deploy:
+ provider: elasticbeanstalk
+ region: us-east-1
+ app: spring-java-mysql-docker
+ env: SpringJavaMysqlDocker-env 
+ bucket_name: elasticbeanstalk-us-east-1-534408061505
+ bucker_path: spring-java-mysql-docker
+ on:
+  branch: master
+ access_key_id: $AWS_ACCESS_KEY
+ secret_access_key:
+  secure: $AWS_SECRET_KEY
