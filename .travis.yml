@@ -17,7 +17,7 @@ deploy:
  app: spring-java-mysql-docker
  env: SpringJavaMysqlDocker-env 
  bucket_name: elasticbeanstalk-us-east-1-534408061505
- bucker_path: spring-java-mysql-docker
+ bucket_path: spring-java-mysql-docker
  on:
   branch: master
  access_key_id: $AWS_ACCESS_KEY
