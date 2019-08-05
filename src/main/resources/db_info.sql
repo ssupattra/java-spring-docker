@@ -6,6 +6,7 @@ CREATE TABLE `event` (
   `modified` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `publish` tinyint(11) DEFAULT '0',
   `address_id` int(11) DEFAULT NULL,
+  `event_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_8wxm9i34wepsu094jo54sys6l` (`address_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;

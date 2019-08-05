@@ -1,5 +1,6 @@
 package com.pearler.myjavaapp.entity;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -9,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Event {
@@ -25,6 +28,9 @@ public class Event {
 	private Date modified;
 	
 	private boolean publish;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date event_date;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "address_id")
@@ -94,6 +100,23 @@ public class Event {
 
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+
+	public Date getEvent_date() {
+		return event_date;
+	}
+	
+	public String getEventDateString() {
+		SimpleDateFormat sm = new SimpleDateFormat("dd-MM-yyyy");
+		if (event_date != null) {
+			return sm.format(event_date);
+		} else {
+			return "";
+		}
+	}
+
+	public void setEvent_date(Date event_date) {
+		this.event_date = event_date;
 	}
 
 	@Override

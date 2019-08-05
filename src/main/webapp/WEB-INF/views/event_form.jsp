@@ -75,7 +75,7 @@
                   <form:hidden path="id" />
                   <div class="form-group">
 				      <label for="title">Title</label>
-				      <form:input type="title" class="form-control" id="title" path="title" />
+				      <form:input type="text" class="form-control" id="title" path="title" required="required" />
 				    </div>
 				  
 				  <div class="form-group">
@@ -83,17 +83,21 @@
 				    <form:textarea class="form-control" id="body" rows="5" path="body"></form:textarea>
 				  </div>
 				  <div class="form-group">
+				    <label for="date">Date</label>
+				    <form:input type="date" dateformat="MM-dd-yyyy" class="form-control datetimepicker" id="event_date" rows="5" path="event_date"></form:input>
+				  </div>
+				  <div class="form-group">
 				    <label for="inputAddress">Event Location - Address</label>
-				    <form:input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" path="address.street"/>
+				    <form:input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" path="address.street" required="required"/>
 				  </div>
 				  <div class="form-row">
 				    <div class="form-group col-md-6">
 				      <label for="inputCity">City</label>
-				      <form:input type="text" class="form-control" id="inputCity" path="address.city"/>
+				      <form:input type="text" class="form-control" id="inputCity" path="address.city" required="required" />
 				    </div>
 				    <div class="form-group col-md-3">
 				      <label for="inputState">State</label>
-				      <form:select id="inputState" class="form-control" path="address.state">
+				      <form:select id="inputState" class="form-control" path="address.state" required="required">
 				      <form:option value="-" label="--Please Select"/>
 				      <form:option value="AL">Alabama</form:option>
 					  <form:option value="AK">Alaska</form:option>
@@ -150,7 +154,7 @@
 				    </div>
 				    <div class="form-group col-md-2 ml-auto">
 				      <label for="inputZip">Zip</label>
-				      <form:input type="text" class="form-control" id="inputZip" path="address.zipCode"/>
+				      <form:input type="text" class="form-control" id="inputZip" path="address.zipCode" required="required"/>
 				    </div>
 				  </div>
 				  <button type="submit" class="btn btn-primary">Submit</button>

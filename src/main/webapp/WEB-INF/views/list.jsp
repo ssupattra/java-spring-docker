@@ -21,6 +21,9 @@
                           Description
                         </th>
                         <th>
+                          Date
+                        </th>
+                        <th>
                           Location
                         </th>
                         
@@ -37,6 +40,9 @@
                           </td>
                           <td>
                             ${event.getBody()}
+                          </td>
+                          <td>
+                            ${event.getEventDateString()}
                           </td>
                           <td>
                             ${event.getAddress().toString()}
