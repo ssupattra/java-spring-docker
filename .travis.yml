@@ -15,7 +15,7 @@ deploy:
  provider: elasticbeanstalk
  region: us-east-1
  app: spring-java-mysql-docker
- env: SpringJavaMysqlDocker-env 
+ env: SpringJavaMysqlDocker-env-1 
  bucket_name: elasticbeanstalk-us-east-1-534408061505
  bucket_path: spring-java-mysql-docker
  on:
