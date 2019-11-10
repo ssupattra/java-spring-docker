@@ -1,5 +1,5 @@
 # java-spring-docker
-This is a java web application to create/update events in MySQL and provide data to other system by using REST API. It will deploy to AWS beanstalk using docker. The other system to retrieve data from this system is https://github.com/ssupattra/php-slim-guzzle-docker.
+This is a java web application to create/update events in MySQL and provide data to other system by using REST API. It will deploy to AWS beanstalk using docker and travis. The other system to retrieve data from this system is https://github.com/ssupattra/php-slim-guzzle-docker.
 
 ## Technology
 Spring Boot, Hibernate, Java, MySQL, Docker, REST API provider
