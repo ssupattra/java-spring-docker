@@ -15,7 +15,7 @@ Spring Boot, Hibernate, Java, MySQL, Docker, REST API provider
 
 ### AWS Setup
 1. Set up web server by using aws beanstalk > create a web server environment, Platform: docker
-2. Set up mysql by using aws beanstalk > config > database > create mysql
+2. Set up mysql by using aws beanstalk > config > database > create mysql, create 'event' database and use db_info.sql to create tables
 3. Add mysql configuration to aws beanstalk > modify software - environment and add constants eg.
 ```
 SPRING_JPA_DATABASE_PLATFORM=org.hibernate.dialect.MySQL5Dialect
