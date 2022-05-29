@@ -13,6 +13,19 @@ Spring Boot, Hibernate, Java, MySQL, Docker, REST API provider
 6. Run in local machine - 'docker-compose up --build'
 7. open browser with http://localhost:8080
 
-Note: use .travis.yml to build docker image (from Dockerfile) and upload to docker hub, then deploy to AWS beanstalk.
+### AWS Setup
+1. Set up web server by using aws beanstalk > create a web server environment, Platform: docker
+2. Set up mysql by using aws beanstalk > config > database > create mysql
+3. Add mysql configuration to aws beanstalk > modify software - environment and add constants eg.
+```SPRING_JPA_DATABASE_PLATFORM=org.hibernate.dialect.MySQL5Dialect
+JDBC_CONNECTION_STRING=jdbc:mysql://xxx@xxx (mysql link)
+MY_SQL_DATABASE=xxx
+MY_SQL_HOST=xxx
+MY_SQL_PASSWORD=xxx
+MY_SQL_USER=xxx
+```
+4. Update aws configuration to .travis.yml eg. aws bucket name
+5. Travis with .travis.yml will build docker image (from Dockerfile) and upload to docker hub, then deploy to AWS beanstalk
+
 
 
