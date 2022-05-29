@@ -7,11 +7,12 @@ Spring Boot, Hibernate, Java, MySQL, Docker, REST API provider
 ## Installation
 1. Install MySQL in local machine
 2. Download this code
-3. Add environment constants (MY_SQL_HOST, MY_SQL_USER, MY_SQL_PASSWORD, MY_SQL_PORT, MY_SQL_DATABASE) when build to war (from Eclipse - click at project > run as > Maven build.. > 'clean install', add these environment constants)
-4. In Dockerfile, war file is under 'target' directory (./target/my-java-app-0.0.1-SNAPSHOT.war)
-5. Update environment constants and volumes in mysqldev section in docker-compose-dev.yml for database configuration, change docker-compose-dev.yml to docker-compose.yml
-6. Run in local machine - 'docker-compose up --build'
-7. open browser with http://localhost:8080
+3. Add environment constants (```MY_SQL_HOST, MY_SQL_USER, MY_SQL_PASSWORD, MY_SQL_PORT, MY_SQL_DATABASE```) when build to war (from Eclipse - click at project > run as > Maven build.. > 'clean install', add these environment constants)
+4. main/resources/application.properties reads those constants to connect to database
+5. In Dockerfile, war file is under 'target' directory (./target/my-java-app-0.0.1-SNAPSHOT.war)
+6. Update environment constants and volumes in mysqldev section in docker-compose-dev.yml for database configuration, change docker-compose-dev.yml to docker-compose.yml
+7. Run in local machine - 'docker-compose up --build'
+8. open browser with ```http://localhost:8080```
 
 ### AWS Setup
 1. Set up web server by using aws beanstalk > create a web server environment, Platform: docker
